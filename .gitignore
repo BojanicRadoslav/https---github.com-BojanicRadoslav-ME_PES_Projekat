@@ -2,4 +2,4 @@
 *.csv
 *.png
 *.jpeg
-\playground\*
+/playground/*
