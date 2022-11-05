@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<title>Web server</title>
+<head> 
+    <meta name="viewport" content="width=device-width">
+    <style>
+        img {
+            max-width: 100%;
+        }
+    </style>
+
+<script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+<script type="text/javascript" charset="utf-8">
+    namespace = '/test';
+    var socket = io(namespace);
+
+    socket.on('connect', function() {
+        socket.emit('my_event', {data: 'Client connection deluxe'});
+    });
+
+    socket.on('my response', function() {
+        document.getElementById("notif").innerHTML = "RESPONSE FROM SERVER DONE";
+    });
+
+    
+    function myFunction() {
+        // document.getElementById("demo").innerHTML = "Hello World";
+        socket.emit('buttonClick', {data: 'Button is clicket at client side'});
+    }
+
+</script>
+
+</head>
+<body>
+
+<h1>Welcome the the FLASK server</h1>
+<h2 id = "notif"></h2>
+<img src="C:\ME_Master\Lenka projekat\server\data\data.png", id = "dataImg">
+
+<button onclick= "myFunction()" >Event test</button>
+
+</body>
+</html>
