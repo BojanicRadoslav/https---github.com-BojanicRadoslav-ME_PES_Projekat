@@ -1,9 +1,12 @@
 from datetime import date, datetime
 import csv
+
 timeLog = {}
+"""Dictionary for logging data of the current day"""
 
 
 def getDate():
+    """Function will return todays date"""
     return date.today()
 
 def logData(temperature: float, humidity: float):
@@ -42,6 +45,7 @@ def generateGraph():
 
 
 def getTime():
+    """Function is returning current time in format %H:%M:%S"""
     now = datetime.now()
     return now.strftime("%H:%M:%S")
     pass

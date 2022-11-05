@@ -1,3 +1,7 @@
+"""
+Main server app for handling client communication
+"""
+
 from flask import Flask, render_template
 from flask_socketio import SocketIO, emit
 from server.utils import LocalNetwork
@@ -9,10 +13,16 @@ socketio = SocketIO(app)
 
 @app.route('/')
 def hello():
+    """
+    Function is used to return main html page to the client
+    """
     return render_template('main.html')
 
 @socketio.on('my_event', namespace='/test')
 def test_message(message):
+    """
+    Handler for receiving event named my_event from JS client
+    """
     print(message)
 
 @socketio.on('buttonClick', namespace='/test')
