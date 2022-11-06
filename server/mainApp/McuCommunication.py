@@ -11,3 +11,5 @@ def receiveMeasurments(temperature, humidity):
     DataLogger.logData(temperature, humidity)
 
 
+def setMeasurmentPeriod():
+    pass

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<title>Relay control</title>
+<head> 
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <style>
+        img {
+            max-width: 100%;
+        }
+    </style>
+<script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+<script type="text/javascript" src="../static/relayControl.js"></script>
+<link rel="stylesheet" href="../static/relayControl.css">
+</head>
+<body>
+    <div class="main-page">
+
+        <div class="page-heading">
+            <div class="heading-text">
+                <h1>Relay control</h1>
+            </div>
+            <div class="server-time">
+            <h3 id="server-time" class="time">server time</h3>
+            </div>
+        </div>
+        <!-- <button style="clear: both;" onclick= "myFunction()" >Event test</button> -->
+
+        <div class="relay-container">
+            <div class="realy_1">
+                <h3 id="relay_1" onclick="relay1Ctrl()">Relay1: click to connect</h3>
+            </div>
+            <div class="realy_2">
+                <h3 id="relay_2" onclick="relay2Ctrl()">Relay2: click to connect</h3>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

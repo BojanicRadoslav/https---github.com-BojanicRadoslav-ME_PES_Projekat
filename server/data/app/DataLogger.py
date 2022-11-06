@@ -50,4 +50,9 @@ def getTime():
     return now.strftime("%H:%M:%S")
     pass
 
+def getDateTime():
+    """Function is returning server data and time"""
+    now = datetime.now()
+    return now.strftime('%d/%m/%Y %H:%M:%S')
+
 

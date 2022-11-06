@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<title>Graphs</title>
+<head> 
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <style>
+        img {
+            max-width: 100%;
+        }
+    </style>
+<script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+<script type="text/javascript" src="../static/graphs.js"></script>
+<link rel="stylesheet" href="../static/graphs.css">
+</head>
+<body>
+<div class="main-page">
+
+    <div class="page-heading">
+        <div class="heading-text">
+            <h1>Graphing service</h1>
+        </div>
+        <div class="server-time">
+        <h3 id="server-time" class="time">server time</h3>
+        </div>
+    </div>
+    <div>
+        <h2 id="databaseDiscovery"onclick="GetDatabases()">Get database names</h2>
+        <ul id="database"></ul>
+    </div>
+
+</div>
+
+</body>
+</html>

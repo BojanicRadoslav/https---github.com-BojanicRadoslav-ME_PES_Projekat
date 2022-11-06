@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<title>Web server</title>
+<head> 
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <style>
+        img {
+            max-width: 100%;
+        }
+    </style>
+<script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+<script type="text/javascript" src="../static/mainPage.js"></script>
+<link rel="stylesheet" href="../static/mainPage.css">
+</head>
+<body>
+<div class="main-page">
+
+    <div class="page-heading">
+        <div class="heading-text">
+            <h1>STM32 monitoring and control system</h1>
+        </div>
+        <div class="server-time">
+        <h3 id="server-time" class="time">server time</h3>
+        </div>
+    </div>
+
+
+
+
+    <button style="clear: both;" onclick= "myFunction()" >Event test</button>
+
+    <div class="dropdown">
+        <button class="dropbtn">Options</button>
+        <div class="dropdown-content">
+        <a href="/graphingService">Graphs</a>
+        <a href="/relayCtrl">Relay Control</a>
+        <a href="/stmSettings">Stm32 Settings</a>
+        </div>
+    </div>
+
+    <div class="temperature"> 
+        <h2 class="temp-text" id="temp-value">Temperature: -99.9C</h2>
+    </div>
+    <div class="humidity">
+        <h2 id="hum-value">Humidity: -99.9%</h2>
+    </div>
+
+</div>
+
+</body>
+</html>

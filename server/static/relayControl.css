@@ -1,0 +1,31 @@
+.main-page {
+    background-color: #3e8e41;
+    position: relative;
+    width:  100%;
+    height: 100%;
+}
+
+.page-heading {
+    background-color: #3e8e41;
+    color: white;
+    width: 100%;
+    position: absolute;
+    display: inline-block;
+    top:0;
+    margin: 5px;
+}
+
+.server-time {
+    color: white;
+    float: right;
+  }
+
+.heading-text {
+    color: white;
+    float: left;
+  }
+
+  .relay-container {
+    position: relative;
+    top: 100px;
+  }

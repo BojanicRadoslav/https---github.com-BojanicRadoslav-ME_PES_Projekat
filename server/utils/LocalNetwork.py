@@ -1,4 +1,5 @@
 import socket  
+"""Module is accessing PC-id, IP address of the local network and setting port on which server will run"""
 
 Hostname=socket.gethostname()  
 """Hostname instance from which PC name and IP will be obtained"""
@@ -47,6 +48,11 @@ def getPort():
     """
     global Port
     return Port
+
+def getNetworkConfig():
+    global IP
+    global Port
+    return IP, Port
 
 def restoreDefaultConfig():
     """
