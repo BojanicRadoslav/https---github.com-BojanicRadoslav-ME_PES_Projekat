@@ -19,9 +19,13 @@ Web server:
     Interval merenja
     Offset temperature
     Offset vlage
+    
 STM konfigurator:
   Tkinger GUI aplikacija:
     podesavanje network podataka SSID i Password preko serijske komunikacije
+    automatska detekcija memorisanih WIFI uredjaja i njihovih lozinki koristeci netsh windows servis
     
 STM32 periodicno salje podatke sa senzora vlage i temperature koristeci socketio event na Flask web server
 Pri svakom slanju Softverska komponenta DataLogger zapisuje u odgovarajuci CSV fajl izmerene vrednosti
+Na osnovu CSV fajlova se generise grafik zavisnosti temperature i vlage od vremena za trazeni dan u trenutku kada klijent zatrazi taj podatak preko graphing service stranice.
+
